@@ -1,18 +1,31 @@
-def bubble_sort(arr):
-    for i in range(0,j-1):
-        for k in range(i+1,j):
-            if arr[i]>arr[k]:
-               arr[i],arr[k]=arr[k],arr[i]  # A function should be defined before it is called. 
-                                            #The body of the function can be defined anywhere in the program.
-    return(arr)
+arr=[]    
 
-siz=input("Enter the no of elements:")
-arr=list(input().split())
-j=0
-for i in arr:
-    arr[j]=int(i)
-    j=j+1
+def bubble_sort():
     
+    for i in range(0,len(arr)-1):
+        for j in range(0,len(arr)-i-1):
+            if arr[j]>arr[j+1]:
+               arr[j],arr[j+1]=arr[j+1],arr[j]  
     
-print(bubble_sort(arr))    
+
+
+def accept_user_input():
+ global arr
+ print("Enter the elements: ",end="\n")
+ arr=list(input().split())      
+ arr=[int(i) for i in arr]
+ 
+
+def print_sorted_list():
+ print("Elements after sorting by Bubble sort:",end="\n")
+ for item in arr:
+  print(item,end=' ')
+ print("\n")
+
+
+accept_user_input()
+
+bubble_sort()
+
+print_sorted_list()  
      
