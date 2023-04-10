@@ -1,37 +1,41 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-void bubble_sort(vector<int>& li)
+
+void bubble_sort(vector<int>& rarray)
 {
-int tmp;
-for(int i=0;i<=li.size()-2;i++)
-{
-for(int j=i+1;j<=li.size()-1;j++)
-{
-if(li[i]>li[j])
-{
-tmp=li[i];
-li[i]=li[j];
-li[j]=tmp;
+	int tmp;
+	for(int i=0;i<rarray.size()-1;i++)
+	{
+		for(int j=0;j<rarray.size()-i-1;j++)
+		{
+			if(rarray[j]>rarray[j+1])
+			{
+				tmp=rarray[j];
+				rarray[j]=rarray[j+1];
+				rarray[j+1]=tmp;
+			}
+		}
+	}
 }
-}
-}
-}
+
 int main()
 {
-int siz,ele;
-vector<int> arr;
-cout<<"Do enter the total count of elements:"<<endl;
-cin>>siz;
-cout<<"Enter the elements: "<<endl;
-for(int i=0;i<siz;i++)
-{
-cin>>ele;
-arr.push_back(ele);
-}
-cout<<endl;
-bubble_sort(arr);
-for(auto& vr: arr)
-cout<<vr<<endl;
-return 0;
+	int size,element;
+	vector<int> darray;
+	cout<<"Do enter the total count of elements:"<<endl;
+	cin>>size;
+	cout<<"Enter the elements: "<<endl;
+	for(int i=0;i<size;i++)
+	{
+		cin>>element;
+		darray.push_back(element);
+	}
+	cout<<endl;
+	bubble_sort(darray);
+	cout<<"Elements after bubble_sort: "<<endl;
+	for(auto& vr: darray)
+		cout<<vr<<" ";
+	cout<<endl;	
+	return 0;
 }
