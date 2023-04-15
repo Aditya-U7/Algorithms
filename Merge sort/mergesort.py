@@ -20,22 +20,22 @@ def merge ( arr, start, mid, end):
  
  ulimit = len(upper_half) 
  
- i=0
- j=0
- pos=start
+ i = 0
+ j = 0
+ pos = start
 
  while ( (i < llimit) and (j < ulimit) ): 
   
   if lower_half[i] == upper_half[j]:
    
    arr[pos] = lower_half[i]
-   i=i+1
+   i = i + 1
    
-   pos=pos+1
+   pos = pos + 1
    
    arr[pos] = upper_half[j]
    
-   j=j+1
+   j = j + 1
   
   elif lower_half[i] < upper_half[j]:
    
@@ -52,7 +52,7 @@ def merge ( arr, start, mid, end):
  while ( i < llimit):
    
    arr[pos] = lower_half[i]
-   i=i+1
+   i = i + 1
    pos = pos + 1
  
  while (j < ulimit):
@@ -82,8 +82,8 @@ def accept_user_input():
  
  global arr
  print("Enter the elements: ",end="\n")
- arr=list(input().split())      
- arr=[int(i) for i in arr]
+ arr = list(input().split())      
+ arr = [int(i) for i in arr]
  
 def print_sorted_list():
  
