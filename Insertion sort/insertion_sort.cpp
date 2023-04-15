@@ -1,6 +1,7 @@
 #include<iostream> 
 #include<vector>
 using namespace std;
+
 void  insertion_sort(vector<int>& array)
 { 
 	int tmp;          
@@ -13,13 +14,11 @@ void  insertion_sort(vector<int>& array)
 				tmp = array[j];
 				array[j] = array[j-1];
 				array[j-1] = tmp;
-
-
-
 			}
 		}
 	}
 }
+
 int main()
 {
 	int size;
