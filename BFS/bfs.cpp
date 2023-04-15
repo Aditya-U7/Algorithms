@@ -95,6 +95,10 @@ int main()
 		check_vertex ( destination , v_count);
 
 		vertices[source].push_back(destination);
+		
+		if ( graph_type == 'u')
+		vertices[destination].push_back(source); 
+		
 		count++;
 	}
 
