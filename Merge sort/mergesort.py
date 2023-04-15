@@ -24,7 +24,7 @@ def merge ( arr, start, mid, end):
  j=0
  pos=start
 
- while ( (i+j) < (end-start) and (i < llimit) and (j < ulimit)): 
+ while ( (i < llimit) and (j < ulimit) ): 
   
   if lower_half[i] == upper_half[j]:
    
