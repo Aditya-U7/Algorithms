@@ -20,22 +20,10 @@ void merge (vector<int>& darr, int start, int mid, int end)
 
 	int limit = (lh.size() + hh.size());
 	
-	
-	while ( (i + j) < limit && (i<lh.size()) && (j<hh.size()))
+        while ( (i<lh.size()) && (j<hh.size()) )
 	{
 
-
-		if ( lh[i] == hh[j])
-		{
-			darr[k]=lh[i];
-			i++;
-			k++;
-			darr[k]=hh[j];
-			j++;
-		}
-		else
-		{
-			if (lh[i]<hh[j])
+			if (lh[i]<=hh[j])
 			{
 				darr[k]=lh[i];
 				i++;
@@ -46,7 +34,7 @@ void merge (vector<int>& darr, int start, int mid, int end)
 				j++;
 				
 			}
-		}
+		
 		
 		k++;
 	}
