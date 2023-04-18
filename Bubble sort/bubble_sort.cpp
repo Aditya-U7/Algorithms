@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void bubble_sort(vector<int> &rarray)
+void bubble_sort(vector<int>& rarray)
 {
 	int tmp;
 	for (int i = 0; i < rarray.size() - 1; i++)
@@ -36,7 +36,7 @@ int main()
 	cout << endl;
 	bubble_sort(darray);
 	cout << "Elements after bubble_sort: " << endl;
-	for (auto &vr: darray)
+	for (auto& vr: darray)
 		cout << vr << " ";
 	cout << endl;
 	return 0;
