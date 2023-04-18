@@ -8,7 +8,7 @@ vector<vector<int>> vertices;
 stack<int> s;
 vector<bool> visited;
 
-void initialise(vector<bool> &v)
+void initialise(vector<bool>& v)
 {
 	v.resize(vertices.size());
 
@@ -23,7 +23,7 @@ void dfs(int vertex)
 
 	s.push(vertex);
 
-	for (auto &neighbour: vertices[vertex])
+	for (auto& neighbour: vertices[vertex])
 	{
 		if (visited[neighbour] == false)
 			dfs(neighbour);
@@ -34,7 +34,7 @@ void dfs(int vertex)
 
 }
 
-void check_vertex(int &v, int &vc)	// check_vertex starts
+void check_vertex(int& v, int& vc)	// check_vertex starts
 {
 	while (v > vc || v < 0)
 	{
