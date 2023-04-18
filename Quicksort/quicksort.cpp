@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-int partition(vector<int> &darray, int start, int end)
+int partition(vector<int>& darray, int start, int end)
 {
 	int pivot = darray[start];
 	int high = start;
@@ -43,7 +43,7 @@ int partition(vector<int> &darray, int start, int end)
 	return pivot_pos;
 }
 
-void quicksort(vector<int> &darray, int start, int end)
+void quicksort(vector<int>& darray, int start, int end)
 {
 	if ((end - start) < 1)
 		return;
@@ -77,7 +77,7 @@ int main()
 	quicksort(darray, 0, darray.size());
 
 	cout << "Elements after quicksort: " << endl;
-	for (auto &vr: darray)
+	for (auto& vr: darray)
 		cout << vr << endl;
 	cout << endl;
 	return 0;
