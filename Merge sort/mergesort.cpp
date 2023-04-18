@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void merge(vector<int> &darr, int start, int mid, int end)
+void merge(vector<int>& darr, int start, int mid, int end)
 {
 	vector<int> lh;
 	vector<int> hh;
@@ -48,7 +48,7 @@ void merge(vector<int> &darr, int start, int mid, int end)
 	}
 }
 
-void mergesort(vector<int> &darr, int start, int end)
+void mergesort(vector<int>& darr, int start, int end)
 {
 	if ((end - start) < 1)
 		return;
@@ -81,7 +81,7 @@ int main()
 	mergesort(darray, 0, (darray.size() - 1));
 
 	cout << "Elements after mergesort: " << endl;
-	for (auto &vr: darray)
+	for (auto& vr: darray)
 		cout << vr << " ";
 	cout << endl;
 	return 0;
