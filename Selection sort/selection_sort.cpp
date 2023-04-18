@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void selection_sort(vector<int> &arr)
+void selection_sort(vector<int>& arr)
 {
 	int tmp;	// temporary variable for holding swap values
 	for (int i = 0; i < arr.size() - 1; i++)
@@ -36,7 +36,7 @@ int main()
 	cout << endl;
 	selection_sort(darray);
 	cout << "Elements after selecton_sort: " << endl;
-	for (auto &vr: darray)
+	for (auto& vr: darray)
 		cout << vr << " ";
 	cout << endl;
 	return 0;
