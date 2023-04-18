@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-void insertion_sort(vector<int> &array)
+void insertion_sort(vector<int>& array)
 {
 	int tmp;
 	for (int i = 1; i < array.size(); i++)
@@ -36,7 +36,7 @@ int main()
 	cout << endl;
 	insertion_sort(darray);
 	cout << "Elements after insertion_sort: " << endl;
-	for (auto &vr: darray)
+	for (auto& vr: darray)
 		cout << vr << endl;
 	cout << endl;
 	return 0;
