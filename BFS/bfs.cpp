@@ -6,7 +6,7 @@ using namespace std;
 vector<vector<int>> vertices;
 queue<int> q;
 
-void initialise(vector<bool> &v)
+void initialise(vector<bool>& v)
 {
 	v.resize(vertices.size());
 
@@ -33,7 +33,7 @@ void bfs(int start)
 		v = q.front();
 		cout << v << endl;
 
-		for (auto &e: vertices[v])
+		for (auto& e: vertices[v])
 		{
 			if (!visited[e])
 			{
@@ -47,7 +47,7 @@ void bfs(int start)
 	}
 }	// bfs ends
 
-void check_vertex(int &v, int &vc)	// check_vertex starts
+void check_vertex(int& v, int& vc)	// check_vertex starts
 {
 	while (v > vc || v < 0)
 	{
