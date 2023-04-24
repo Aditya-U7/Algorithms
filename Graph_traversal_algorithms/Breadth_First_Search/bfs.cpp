@@ -94,6 +94,8 @@ int main()
 
 	cout << "\nEnter the start vertex: ";
 	cin >> start_vertex;
+	
+	check_vertex(start_vertex, v_count)
 
 	bfs(start_vertex);
 
