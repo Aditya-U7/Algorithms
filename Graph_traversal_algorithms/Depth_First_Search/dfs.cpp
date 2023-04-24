@@ -82,6 +82,9 @@ int main()
 	cout << "\nEnter the start vertex: ";
 	cin >> start_vertex;
 	initialise(visited);
+	
+	check_vertex(start_vertex, v_count)
+	
 	dfs(start_vertex);
 
 	return 0;
