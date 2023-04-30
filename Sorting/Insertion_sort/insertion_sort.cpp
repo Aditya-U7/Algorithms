@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
-void insertion_sort(vector<int>& array)
+void insertion_sort(std::vector<int>& array)
 {
 	int tmp;
 	for (int i = 1; i < array.size(); i++)
@@ -23,21 +22,21 @@ int main()
 {
 	int size;
 	int element;
-	vector<int> darray;
-	cout << "Do enter the total count of elements:" << endl;
-	cin >> size;
-	cout << "Enter the elements: " << endl;
+	std::vector<int> darray;
+	std::cout << "Do enter the total count of elements:" << std::endl;
+	std::cin >> size;
+	std::cout << "Enter the elements: " << std::endl;
 	for (int i = 0; i < size; i++)
 	{
-		cin >> element;
+		std::cin >> element;
 		darray.push_back(element);
 	}
 
-	cout << endl;
+	std::cout << std::endl;
 	insertion_sort(darray);
-	cout << "Elements after insertion_sort: " << endl;
+	std::cout << "Elements after Insertion sort: " << std::endl;
 	for (auto& vr: darray)
-		cout << vr << endl;
-	cout << endl;
+		std::cout << vr << std::endl;
+	std::cout << std::endl;
 	return 0;
 }

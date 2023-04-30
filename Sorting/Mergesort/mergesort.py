@@ -55,7 +55,7 @@ def mergesort(arr, start, end):
     if (end - start) < 1:
         return None
 
-    mid = (start + end) // 2
+    mid = (start+end) // 2
 
     mergesort(arr, start, mid)
     mergesort(arr, mid + 1, end)

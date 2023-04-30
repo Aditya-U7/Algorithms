@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
-void bubble_sort(vector<int>& rarray)
+void bubble_sort(std::vector<int>& rarray)
 {
 	int tmp;
 	for (int i = 0; i < rarray.size() - 1; i++)
@@ -23,21 +22,21 @@ int main()
 {
 	int size;
 	int element;
-	vector<int> darray;
-	cout << "Do enter the total count of elements:" << endl;
-	cin >> size;
-	cout << "Enter the elements: " << endl;
+	std::vector<int> darray;
+	std::cout << "Do enter the total count of elements:" << std::endl;
+	std::cin >> size;
+	std::cout << "Enter the elements: " << std::endl;
 	for (int i = 0; i < size; i++)
 	{
-		cin >> element;
+		std::cin >> element;
 		darray.push_back(element);
 	}
 
-	cout << endl;
+	std::cout << std::endl;
 	bubble_sort(darray);
-	cout << "Elements after bubble_sort: " << endl;
+	std::cout << "Elements after bubble_sort: " << std::endl;
 	for (auto& vr: darray)
-		cout << vr << " ";
-	cout << endl;
+		std::cout << vr << " ";
+	std::cout << std::endl;
 	return 0;
 }

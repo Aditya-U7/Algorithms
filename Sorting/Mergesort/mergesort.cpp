@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
-void merge(vector<int>& darr, int start, int mid, int end)
+
+void merge(std::vector<int>& darr, int start, int mid, int end)
 {
-	vector<int> lh;
-	vector<int> hh;
+	std::vector<int> lh;
+	std::vector<int> hh;
 
 	for (int i = start; i <= mid; i++)
 		lh.push_back(darr[i]);
@@ -48,7 +48,7 @@ void merge(vector<int>& darr, int start, int mid, int end)
 	}
 }
 
-void mergesort(vector<int>& darr, int start, int end)
+void mergesort(std::vector<int>& darr, int start, int end)
 {
 	if ((end - start) < 1)
 		return;
@@ -65,24 +65,24 @@ int main()
 {
 	int size;
 	int element;
-	vector<int> darray;
-	cout << "Do enter the total count of elements:" << endl;
-	cin >> size;
+	std::vector<int> darray;
+	std::cout << "Do enter the total count of elements:" << std::endl;
+	std::cin >> size;
 
-	cout << "Enter the elements: " << endl;
+	std::cout << "Enter the elements: " << std::endl;
 	for (int i = 0; i < size; i++)
 	{
-		cin >> element;
+		std::cin >> element;
 		darray.push_back(element);
 	}
 
-	cout << endl;
+	std::cout << std::endl;
 
 	mergesort(darray, 0, (darray.size() - 1));
 
-	cout << "Elements after mergesort: " << endl;
+	std::cout << "Elements after mergesort: " << std::endl;
 	for (auto& vr: darray)
-		cout << vr << " ";
-	cout << endl;
+		std::cout << vr << " ";
+	std::cout << std::endl;
 	return 0;
 }

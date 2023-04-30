@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
-int partition(vector<int>& darray, int start, int end)
+int partition(std::vector<int>& darray, int start, int end)
 {
 	int pivot = darray[start];
 	int high = start;
@@ -43,7 +42,7 @@ int partition(vector<int>& darray, int start, int end)
 	return pivot_pos;
 }
 
-void quicksort(vector<int>& darray, int start, int end)
+void quicksort(std::vector<int>& darray, int start, int end)
 {
 	if ((end - start) < 1)
 		return;
@@ -62,23 +61,23 @@ int main()
 	int size;
 	int element;
 
-	vector<int> darray;
-	cout << "Do enter the total count of elements:" << endl;
-	cin >> size;
-	cout << "Enter the elements: " << endl;
+	std::vector<int> darray;
+	std::cout << "Do enter the total count of elements:" << std::endl;
+	std::cin >> size;
+	std::cout << "Enter the elements: " << std::endl;
 	for (int i = 0; i < size; i++)
 	{
-		cin >> element;
+		std::cin >> element;
 		darray.push_back(element);
 	}
 
-	cout << endl;
+	std::cout << std::endl;
 
 	quicksort(darray, 0, darray.size());
 
-	cout << "Elements after quicksort: " << endl;
+	std::cout << "Elements after quicksort: " << std::endl;
 	for (auto& vr: darray)
-		cout << vr << endl;
-	cout << endl;
+		std::cout << vr << std::endl;
+	std::cout << std::endl;
 	return 0;
 }
