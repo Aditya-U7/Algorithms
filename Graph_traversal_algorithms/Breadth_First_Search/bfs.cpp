@@ -69,9 +69,7 @@ void read_the_edges(std::vector<std::vector<int>>& adj, int& ec, int& v_count, c
 	int source;
 	int destination;
 
-
-
-	std::cout << "\nEnter the edges: " << std::endl;
+        std::cout << "\nEnter the edges: " << std::endl;
 
 	while (ec--)
 	{
