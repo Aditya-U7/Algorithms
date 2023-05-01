@@ -47,9 +47,7 @@ void quicksort(std::vector<int>& darray, int start, int end)
 	if ((end - start) < 1)
 		return;
 
-	int pivot_pos;
-
-	pivot_pos = partition(darray, start, end);
+	int pivot_pos = partition(darray, start, end);
 
 	quicksort(darray, start, pivot_pos);
 	quicksort(darray, pivot_pos + 1, end);
