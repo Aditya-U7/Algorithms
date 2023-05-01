@@ -13,6 +13,10 @@ Then the user will asked to enter the edge or edges. If the vertex is greater th
 
 After the reading the start vertex, the dfs algorithm will be called. 
 
-Sample output of the program:
+Sample output of the program (C++):
 
 ![Screenshot](dfsoutput.png)
+
+Sample output of the program (Python):
+
+![Screenshot](dfsoutputpy.png)
