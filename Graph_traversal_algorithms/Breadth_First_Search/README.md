@@ -13,8 +13,12 @@ Then the user will asked to enter the edge or edges. If the vertex is greater th
 
 ![Screenshot](bfsinvalidvertex.png)
 
-Output of the program:
+Sample output of the program (C++):
 
 ![Screenshot](bfsoutput.png)
+
+Sample output of the program (Python):
+
+![Screenshot](bfsoutputpy.png)
 
 
