@@ -59,7 +59,7 @@ void check_weight(int& w)
 {
 	while (w < 0)
 	{
-		std::cout << "Invalid weight input. Please enter a postive weight." <<std::endl;
+		std::cout << "Invalid weight input. Please enter a postive weight." << std::endl;
 		std::cin >> w;
 	}
 }
