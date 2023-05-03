@@ -6,7 +6,7 @@ Consider the graph below:
 
 ![Screenshot](dijkstraoutput.png)
 
-NOTE: Graph created using the website : https://csacademy.com/app/graph_editor.
+NOTE: Graph created using the website: https://csacademy.com/app/graph_editor.
 
 User will asked for the number of vertices and the number of edges.
 
