@@ -17,3 +17,8 @@ vertex1 vertex2 weight
 The same graph above given as input in the textual form, after applying the algorithm it finds the minimum distance to all the vertices from the start vertex 5:
 
 ![Screenshot](dijkstracpp.png)
+
+
+Sample output of the python implementation:
+
+![Screenshot](dijkstrapy.png)
