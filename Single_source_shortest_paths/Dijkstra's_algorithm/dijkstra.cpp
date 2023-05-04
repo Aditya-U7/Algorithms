@@ -92,7 +92,7 @@ void read_the_edges(std::vector<std::map<int,int>>& adj, int& ec, int& v_count, 
 	int source;
 	int destination;
 	int weight;
-	std::cout << "\nEnter the edges and their weight (non-negative): " << std::endl;
+	std::cout << "\nEnter the edges and their weights (non-negative): " << std::endl;
 
 	while (ec--)
 	{
