@@ -12,7 +12,7 @@ def dijkstra(adj_list, start_vertex, tw):
         
         for j in range(len(distance)):
         
-            if ( (not visited[j]) and (distance[j] < tw)):
+            if ((not visited[j]) and (distance[j] < tw)):
             
                 minimum_weight = distance[j]
                 
@@ -20,7 +20,7 @@ def dijkstra(adj_list, start_vertex, tw):
                 
         visited[mw_vertex] = True
         
-        for key,value in adj_list[mw_vertex].items():
+        for key, value in adj_list[mw_vertex].items():
         
             if distance[key] > distance[mw_vertex] + value:
                 
@@ -62,18 +62,19 @@ def check_weight(weight):
             return weight    
 
 
-def read_edges(noe, adj_list):                  # noe = no_of_edges
+def read_edges(nov, noe, adj_list):                  # noe = no_of_edges
     
     tw = 1
     
     print("\nProvide the edges and their weights: \nvertex1 vertex2 weight", end="\n")
+    
     while (noe):
 
         vertex = list(input().split(" "))
         source, destination, weight = int(vertex[0]), int(vertex[1]), int(vertex[2])     
     
-        source = check_vertex(source, no_of_vertices)
-        destination = check_vertex(destination, no_of_vertices)
+        source = check_vertex(source, nov)
+        destination = check_vertex(destination, nov)
         
         weight = check_weight(weight)
         
@@ -87,7 +88,7 @@ def read_edges(noe, adj_list):                  # noe = no_of_edges
     
     return (tw)         
 
-# This is the start of the program #
+###################################################
 
 no_of_vertices = int(input("Enter the no of vertices: "))
 
@@ -95,7 +96,7 @@ adj_list = [{} for i in range(0, (no_of_vertices))]
 
 no_of_edges = int(input("\nEnter the no of edges: "))    
 
-total_weight = read_edges(no_of_edges, adj_list)
+total_weight = read_edges(no_of_vertices, no_of_edges, adj_list)
 
 start_vertex = int(input("\nEnter the start vertex: "))
 
