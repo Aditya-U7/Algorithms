@@ -12,6 +12,29 @@ def check_vertex(vertex, nov):
             return vertex
 
 
+def read_edges(nov, noe, adj_list): 
+    
+    print("Enter the edges: ")
+
+    while (noe):
+
+        vertex = list(input().split())
+        source, destination = int(vertex[0]), int(vertex[1])     
+    
+        source = check_vertex(source, nov)
+        destination = check_vertex(destination, nov)
+        
+        adj_list[source].append(destination)
+    
+        if graph_type == 'u':
+        
+            adj_list[destination].append(source)
+    
+        noe -= 1
+    
+    return adj_list    
+
+
 def bfs(start, adj_list):
     
     visited = [False for i in range(len(adj_list))]    
@@ -37,31 +60,8 @@ def bfs(start, adj_list):
               queue.append(neighbour)
           
        print(vertex)   
-           
 
-def read_edges(nov, noe, adj_list): 
-    
-    print("Enter the edges: ")
-
-    while (noe):
-
-        vertex = list(input().split())
-        source, destination = int(vertex[0]), int(vertex[1])     
-    
-        source = check_vertex(source, nov)
-        destination = check_vertex(destination, nov)
-    
-   
-        adj_list[source].append(destination)
-    
-        if graph_type == 'u':
-        
-            adj_list[destination].append(source)
-    
-        noe -= 1
-    
-    return adj_list    
-         
+ 
 #######################################################   
 
 no_of_vertices = int(input("Enter the no of vertices: "))
