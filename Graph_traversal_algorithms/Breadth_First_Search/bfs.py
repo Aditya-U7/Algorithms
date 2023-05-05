@@ -66,7 +66,7 @@ def bfs(start, adj_list):
 
 no_of_vertices = int(input("Enter the no of vertices: "))
 
-adj_list = [[] for i in range(0, (no_of_vertices+1))]
+adj_list = [[] for i in range(0, (no_of_vertices + 1))]
 
 no_of_edges = int(input("Enter the no of edges: "))    
 
