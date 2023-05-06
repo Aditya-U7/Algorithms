@@ -1,7 +1,5 @@
 def dijkstra(adj_list, start_vertex, tw):
     
-    visited = [False for i in range(len(adj_list))]
-    
     distance = [tw for i in range(len(adj_list))]
    
     distance[start_vertex] = 0
