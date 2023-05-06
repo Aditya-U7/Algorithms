@@ -30,7 +30,7 @@ def dijkstra(adj_list, start_vertex, tw):
     
     for each in distance:
         
-        print("Shortest distance to vertex", vertex_no," : ",distance[vertex_no])
+        print("Shortest distance to vertex", vertex_no," : ", each)
         
         vertex_no += 1         
 
