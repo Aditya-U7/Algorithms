@@ -18,19 +18,20 @@ void bellmanford(std::vector<std::map<int,int>> adj, int& start, int& twc, int v
 
 		for(int i = 0; i < adj.size(); i++)
 		{
-			
-      for(auto neighbour : adj[i])
+			for(auto neighbour : adj[i])
 			{
-       
-        distance[neighbour.first] =  std::min(distance[neighbour.first], distance[i] + neighbour.second);
-      
-      }
 
-    }
-	
-  }
-	
-  int count = 0;
+
+				distance[neighbour.first] =  std::min(distance[neighbour.first], distance[i] + neighbour.second);
+
+			}
+
+
+
+		}
+	}
+
+	int count = 0;
 
 	for(auto& d : distance)
 	{
