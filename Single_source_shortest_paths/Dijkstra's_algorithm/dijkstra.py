@@ -1,6 +1,6 @@
 def dijkstra(adj_list, start_vertex, tw):
     
-    visited = [ False for i in range(len(adj_list))]
+    visited = [False for i in range(len(adj_list))]
     
     distance = [tw for i in range(len(adj_list))]
    
