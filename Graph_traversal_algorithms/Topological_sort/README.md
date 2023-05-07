@@ -10,4 +10,4 @@ Output of the C++ implementation for the above graph:
 
 Output of the Python implementation:
 
-![Screenshot](topsortpy.png)]
+![Screenshot](topsortpy.png)
