@@ -28,7 +28,7 @@ def check_vertex(vertex, nov):
     
     while(1):
         
-        if (vertex > nov or vertex < 0):
+        if (vertex >= nov or vertex < 0):
             
             print("Invalid vertex: ", vertex)
             
