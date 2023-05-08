@@ -1,6 +1,6 @@
-Prim's algorithm works on connnected undirected graph. It finds the minimum spanning tree for the given graph.
+Prim's algorithm works on connected undirected graph. It finds the minimum spanning tree for the given graph.
 
-When the below graph is given as input to the program:
+When the below graph is given as an input to the program:
 
 ![Screenshot](primgraph.png) 
 
