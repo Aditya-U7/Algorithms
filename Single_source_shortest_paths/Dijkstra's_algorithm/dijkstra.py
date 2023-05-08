@@ -1,6 +1,8 @@
 def dijkstra(adj_list, start_vertex, tw):
     
     distance = [tw for i in range(len(adj_list))]
+    
+    visited = [False for i in range(len(adj_list))]
    
     distance[start_vertex] = 0
     
@@ -10,7 +12,7 @@ def dijkstra(adj_list, start_vertex, tw):
         
         for j in range(len(distance)):
         
-            if ((not visited[j]) and (distance[j] < tw)):
+            if ((not visited[j]) and (distance[j] < minimum_weight)):
             
                 minimum_weight = distance[j]
                 
@@ -101,4 +103,3 @@ start_vertex = int(input("\nEnter the start vertex: "))
 print("Calling Dijkstra's algorithm...", end="\n")
 
 dijkstra(adj_list, start_vertex, total_weight)          # Calling the Dijkstra's algorithm        
-
