@@ -2,7 +2,7 @@ def check_vertex(vertex, nov):
     
     while(1):
         
-        if (vertex > nov or vertex < 0):
+        if (vertex >= nov or vertex < 0):
             
             print("Invalid vertex: ", vertex)
             
@@ -52,7 +52,7 @@ def dfs(adj_list, vertex, visited):
 
 no_of_vertices = int(input("Enter the no of vertices: "))
 
-adj_list = [[] for i in range(0, (no_of_vertices + 1))]
+adj_list = [[] for i in range(0, (no_of_vertices))]
 
 no_of_edges = int(input("Enter the no of edges: "))    
 

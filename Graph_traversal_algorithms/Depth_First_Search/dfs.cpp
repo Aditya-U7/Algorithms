@@ -42,7 +42,7 @@ void read_the_graph_type(char& gt)
 
 void check_vertex(int& v, int& vc)	// check_vertex starts
 {
-	while (v > vc || v < 0)
+	while (v >= vc || v < 0)
 	{
 		std::cout << "Invalid vertex no: " << v << std::endl;
 		std::cout << "Re enter the vertex: " << std::endl;
@@ -57,7 +57,7 @@ void read_the_edges(std::vector<std::vector<int>>& adj, int& ec, int& v_count, c
 	int source;
 	int destination;
 
-	std::cout << "\nEnter the edges: " << std::endl;
+        std::cout << "\nEnter the edges: " << std::endl;
 
 	while (ec--)
 	{
@@ -71,7 +71,6 @@ void read_the_edges(std::vector<std::vector<int>>& adj, int& ec, int& v_count, c
 		if (gt == 'u')
 			adj[destination].push_back(source);
 	}
-
 
 }
 
@@ -87,7 +86,7 @@ int main()
 
 	read_vertex_and_edge_count(vertices_count, edges_count);
 
-	std::vector< std::vector<int> > adjacency_list(vertices_count + 1);
+	std::vector< std::vector<int> > adjacency_list(vertices_count);
 
 	read_the_graph_type(graph_type); 
 
