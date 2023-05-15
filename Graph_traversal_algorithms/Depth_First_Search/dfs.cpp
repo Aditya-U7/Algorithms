@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <stack>
 
 
 void dfs(std::vector< std::vector<int>>& adjacency_list, int vertex, std::vector<bool>& visited)
