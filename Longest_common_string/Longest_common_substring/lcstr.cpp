@@ -12,9 +12,9 @@ int lcs(const std::string str1, const std::string str2)
 
 	int col = str2.length();
 
-	std::vector<int> v((col+1), 0);
+	std::vector<int> v((col + 1), 0);
 
-	std::vector<std::vector<int>> mat((row+1), v);
+	std::vector<std::vector<int>> mat((row + 1), v);
 
 	for (int i = (col - 1); i >= 0; --i)
 	{
@@ -24,7 +24,7 @@ int lcs(const std::string str1, const std::string str2)
 
 			if (str1[j] == str2[i])
 
-				mat[j][i] = mat[j+1][i+1] + 1;
+				mat[j][i] = mat[j + 1][i + 1] + 1;
 
 			if (mat[j][i] > max_len)
 
