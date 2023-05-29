@@ -1,4 +1,4 @@
-def lcw(str1, str2):
+def lcs(str1, str2):
     
     r = len(str1)
     c = len(str2)
@@ -30,6 +30,6 @@ def lcw(str1, str2):
 str_one = input("Enter string one:\n")
 str_two = input("Enter string two:\n")
 
-maximum_length = lcw(str_one, str_two)
+maximum_length = lcs(str_one, str_two)
 
 print("\nLength of longest common subsequence is:\n", maximum_length, sep="")
