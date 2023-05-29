@@ -53,8 +53,6 @@ int main()
 
 	std::cin >> str_two;
 
-	lcs(str_one, str_two);
-
 	int maximum_length = lcs(str_one, str_two);
 
 	std::cout << "\nMaximum substring is " << maximum_length << std::endl;
