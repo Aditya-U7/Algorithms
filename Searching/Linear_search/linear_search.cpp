@@ -2,7 +2,7 @@
 #include <vector>
 
 
-void linear_search(std::vector<int>& arr, int& key)
+void linear_search(const std::vector<int>& arr, const int& key)
 {
 
 	bool found = false;
