@@ -3,7 +3,7 @@
 #include <queue>
 
 
-void bfs(std::vector<std::vector<int>>& adj_l, int start)
+void bfs(const std::vector<std::vector<int>>& adj_l, int start)
 {
 	//bfs starts                          
 
