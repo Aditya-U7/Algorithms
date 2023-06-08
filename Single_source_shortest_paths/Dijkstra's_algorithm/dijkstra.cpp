@@ -1,10 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <map>
-#include <queue>
 
 
-void dijkstra(std::vector<std::map<int,int>>& adj, int& start, int& twc)
+void dijkstra(const std::vector<std::map<int,int>>& adj, const int& start, const int& twc)
 {
 
 	int initial_vertex = start;
@@ -22,10 +21,10 @@ void dijkstra(std::vector<std::map<int,int>>& adj, int& start, int& twc)
 		int selected_vertex;
 
 
-		for(int vn = 0; vn < adj.size(); vn++) 
+		for (int vn = 0; vn < adj.size(); vn++) 
 		{
 
-			if (visited[vn] == false && distance[vn] < minimum_weight)  
+			if (!visited[vn] && distance[vn] < minimum_weight)  
 			{
 
 				minimum_weight = distance[vn];
@@ -36,7 +35,7 @@ void dijkstra(std::vector<std::map<int,int>>& adj, int& start, int& twc)
 
 		visited[selected_vertex] = true;
 
-		for(auto neighbour : adj[selected_vertex])
+		for (auto neighbour : adj[selected_vertex])
 		{
 			if (distance[neighbour.first] > distance[selected_vertex] + neighbour.second) 
 
@@ -47,7 +46,7 @@ void dijkstra(std::vector<std::map<int,int>>& adj, int& start, int& twc)
 
 	int count = 0;
 
-	for(auto& d : distance)
+	for (auto& d : distance)
 	{
 		std::cout << "Distance from "<< initial_vertex << " to  vertex " << count << " is: "<< d << std::endl;
 		count++;
@@ -59,7 +58,7 @@ void check_weight(int& w)
 {
 	while (w < 0)
 	{
-		std::cout << "Invalid weight input. Please enter a postive weight." << std::endl;
+		std::cout << "Invalid weight input. Please enter a postive weight." <<std::endl;
 		std::cin >> w;
 	}
 }
