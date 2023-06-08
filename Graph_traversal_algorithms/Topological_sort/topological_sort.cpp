@@ -3,14 +3,14 @@
 #include <queue>
 
 
-void topological_sort(std::vector<std::vector<int>>& adj_list)
+void topological_sort(const std::vector<std::vector<int>>& adj_list)
 {
 
 	std::vector<int> indegree(adj_list.size(), 0);
 
 	std::queue<int> vertices_with_indegree_zero;
-        
-        std::vector<int> visiting_order;
+
+	std::vector<int> visiting_order;
 
 	for (auto& neighbours: adj_list)
 	{
@@ -54,14 +54,14 @@ void topological_sort(std::vector<std::vector<int>>& adj_list)
 
 
 	}
-	
-	if (visiting_order.size() != 0)
-	std::cout << "\nThe visiting order of vertices is as follows:" << std::endl;
-	
-	for (auto& vertex : visiting_order)
-	std::cout << vertex << " ";
 
-        std::cout << std::endl;
+	if (visiting_order.size() != 0)
+		std::cout << "\nThe visiting order of vertices is as follows:" << std::endl;
+
+	for (auto& vertex : visiting_order)
+		std::cout << vertex << " ";
+
+	std::cout << std::endl;
 }
 
 
