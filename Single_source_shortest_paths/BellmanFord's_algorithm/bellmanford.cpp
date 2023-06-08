@@ -4,7 +4,7 @@
 #include <algorithm>
 
 
-void bellmanford(std::vector<std::map<int,int>> adj, int& start, int& twc, int vc)
+void bellmanford(const std::vector<std::map<int,int>> adj, const int& start, const int& twc, int vc)
 {
 
 	int initial_vertex = start;
