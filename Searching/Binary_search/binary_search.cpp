@@ -2,7 +2,7 @@
 #include <vector>
 
 
-void binary_search(std::vector<int>& arr, int& k)
+void binary_search(const std::vector<int>& arr,const int& k)
 {
 
 	int low = 0;
