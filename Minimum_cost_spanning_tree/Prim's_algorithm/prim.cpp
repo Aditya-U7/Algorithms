@@ -3,7 +3,7 @@
 #include <map>
 
 
-void prim(std::vector<std::map<int,int>>& adj_list, int& twc)
+void prim(const std::vector<std::map<int,int>>& adj_list, int& twc)
 {
 
 	std::vector<int> distance(adj_list.size(), twc);
