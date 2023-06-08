@@ -3,7 +3,7 @@
 #include <algorithm>
 
 
-int kadane(std::vector<int>& val)
+int kadane(const std::vector<int>& val)
 {
 
 	int max_sum = val[0];
@@ -32,10 +32,10 @@ int main()
 	for (int element; std::cin >> element;)
 		values.push_back(element);
 
-	if (values.size() == 0)
+	if (!values.size())
 	{
 
-		std::cout << "Empty array." <<std::endl;
+		std::cerr << "Empty array." <<std::endl;
 		exit(1);
 
 	}
