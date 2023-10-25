@@ -37,7 +37,7 @@ def dijkstra(adj_list, start_vertex, tw):
 
 def check_vertex(vertex, nov):
     
-    while(1):
+    while (True):
         
         if (vertex >= nov or vertex < 0):
             
@@ -51,7 +51,7 @@ def check_vertex(vertex, nov):
 
 def check_weight(weight):
     
-    while(1):
+    while (True):
         
         if (weight < 0):
             
