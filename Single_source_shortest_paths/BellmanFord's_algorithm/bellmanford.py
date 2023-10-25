@@ -4,7 +4,7 @@ def bellmanford(adj_list, start_vertex, tw, noe):
    
     distance[start_vertex] = 0
     
-    while(noe):
+    while (noe):
     
         for i in range(len(adj_list)):
         
@@ -26,7 +26,7 @@ def bellmanford(adj_list, start_vertex, tw, noe):
 
 def check_vertex(vertex, nov):
     
-    while(1):
+    while (True):
         
         if (vertex >= nov or vertex < 0):
             
