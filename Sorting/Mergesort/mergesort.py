@@ -29,25 +29,25 @@ def merge(arr, start, mid, end):
         if lower_half[i] <= upper_half[j]:
 
             arr[pos] = lower_half[i]
-            i = i + 1
+            i += 1
 
         else:
 
             arr[pos] = upper_half[j]
-            j = j + 1
+            j += 1
 
-        pos = pos + 1
+        pos += 1
 
     while i < llimit:
 
         arr[pos] = lower_half[i]
-        i = i + 1
-        pos = pos + 1
+        i += 1
+        pos += 1
 
     while j < ulimit:
         arr[pos] = upper_half[j]
-        j = j + 1
-        pos = pos + 1
+        j += 1
+        pos += 1
 
 
 def mergesort(arr, start, end):
