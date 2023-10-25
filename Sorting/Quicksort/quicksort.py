@@ -14,14 +14,14 @@ def partition(arr, start, end):
             if gt != start:
 
                 arr[gt], arr[pos] = arr[pos], arr[gt]
-                gt = gt + 1
+                gt += 1
 
-            lt = lt + 1
+            lt += 1
 
         if arr[pos] >= pivot:
             if gt == start:
                 gt = pos
-        pos = pos + 1
+        pos += 1
     arr[start], arr[lt] = arr[lt], pivot
 
     return lt
