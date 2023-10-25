@@ -43,7 +43,7 @@ def prim(adj_list, tw):
                  
 def check_vertex(vertex, nov):
     
-    while(1):
+    while (True):
         
         if (vertex >= nov or vertex < 0):
             
