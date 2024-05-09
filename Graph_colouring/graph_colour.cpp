@@ -81,8 +81,7 @@ int main()
 	int vertex;
 	int vertices_count = 0;
 	int edges_count = 0;
-	char graph_type = 'd';
-
+	
 	read_vertex_and_edge_count(vertices_count, edges_count);
 
 	std::vector<std::vector<int>> adjacency_list(vertices_count);
