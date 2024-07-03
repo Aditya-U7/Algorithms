@@ -57,7 +57,7 @@ void activity_selector(std::multimap<int, int>& act_list, std::multimap<int, int
 	}
 
 
-	std::cout << "The following activites will be selected: " << std::endl;
+	std::cout << "The following activities will be selected: " << std::endl;
 	for (auto no : selected_activities)
 	{
 		std::cout << no << " ";
