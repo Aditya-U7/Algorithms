@@ -34,8 +34,7 @@ bool check_finish_time(const int& start_time, const int& finish_time)
 void activity_selector(std::multimap<int, int>& act_list, std::multimap<int, int>& act_count)
 {
 
-	int count = 0;
-	std::vector<int> selected_activities;
+        std::vector<int> selected_activities;
 
 	int prev_ft = act_list.begin() -> second;
 
