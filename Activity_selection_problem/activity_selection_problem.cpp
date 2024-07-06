@@ -31,7 +31,7 @@ bool check_finish_time(const int& start_time, const int& finish_time)
 }
 
 
-void activity_selector(const std::multimap<int, int>& act_list,const std::multimap<int, int>& act_count)
+void activity_selector(const std::multimap<int, int>& act_list, const std::multimap<int, int>& act_count)
 {
 
 
