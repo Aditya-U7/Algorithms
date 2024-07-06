@@ -31,33 +31,34 @@ bool check_finish_time(const int& start_time, const int& finish_time)
 }
 
 
-void activity_selector(std::multimap<int, int>& act_list, std::multimap<int, int>& act_count)
+void activity_selector(const std::multimap<int, int>& act_list,const std::multimap<int, int>& act_count)
 {
 
-        std::vector<int> selected_activities;
+
+	std::vector<int> selected_activities;
 
 	int prev_ft = act_list.begin() -> second;
 
 	auto itr_act_count = act_count.begin();
 
-	for (auto itr_act_list = act_list.begin(); itr_act_list != act_list.end(); itr_act_list++)
+	for (auto key: act_list)
 	{
 
-		if (itr_act_list -> second >= prev_ft)
+		if (key.second >= prev_ft)
 		{
 
 			selected_activities.push_back(itr_act_count -> second);
-			prev_ft = itr_act_list -> first;
+			prev_ft = key.first;
 		}
 
 
-		itr_act_count++;
+		itr_act_count++; ;
+        }
 
-	}
+	if (selected_activities.size())
+		std::cout << "The following activities will be selected: " << std::endl;
 
-
-	std::cout << "The following activities will be selected: " << std::endl;
-	for (auto no : selected_activities)
+	for (auto& no : selected_activities)
 	{
 		std::cout << no << " ";
 
