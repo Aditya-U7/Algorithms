@@ -52,7 +52,7 @@ void activity_selector(const std::multimap<int, int>& act_list,const std::multim
 		}
 
 
-		itr_act_count++; ;
+		itr_act_count++; 
         }
 
 	if (selected_activities.size())
